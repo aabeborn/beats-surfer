@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
     title: 'Beats Surfer',
     description: 'Surf the beats like the ocean waves',
+    icons: {
+        icon: "/favicon.ico",
+        apple: "/apple-touch-icon.png"
+    }
 }
 
 export default function RootLayout({
@@ -17,6 +21,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
+                {/* @ts-expect-error */}
                 <Providers>
                     {children}
                 </Providers>

@@ -8,7 +8,10 @@ const spotify: OAuthUserConfig<SpotifyProfile> = {
 }
 
 export const config: AuthOptions = {
-    providers: [SpotifyProvider(spotify)]
+    providers: [SpotifyProvider(spotify)],
+    pages: {
+        signIn: '/auth/login'
+    }
 }
 
 export default NextAuth(config)
