@@ -7,7 +7,7 @@ const spotify: OAuthUserConfig<SpotifyProfile> = {
     clientSecret: process.env.SPOTIFY_SECRET
 }
 
-const config: AuthOptions = {
+export const config: AuthOptions = {
     providers: [SpotifyProvider(spotify)]
 }
 
