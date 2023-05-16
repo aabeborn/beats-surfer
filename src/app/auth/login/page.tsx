@@ -8,7 +8,7 @@ const pacifico = Pacifico({ weight: '400', subsets: ['latin'] });
 export default function LoginPage() {
     return <main className="w-full h-full bg-background relative inline-flex items-center">
         <div className="w-full h-full absolute t-0 l-0  z-0">
-            <Image src="/login/landing5.jpg" className='object-cover' fill={true} alt="landing" />
+            <Image src="/login/landing.jpg" className='object-cover' fill={true} alt="landing" />
         </div>
         <section className='grow h-full flex items-center justify-center z-10'>
             <div className='bg-foreground rounded-xl p-8 flex flex-col items-center gap-8 md:inline-flex md:flex-row'>
