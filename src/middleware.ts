@@ -1,4 +1,3 @@
-import {redirect} from 'next/navigation'
 import {NextRequest, NextResponse} from 'next/server'
 import {getToken} from 'next-auth/jwt'
 import {withAuth} from 'next-auth/middleware'
@@ -16,17 +15,14 @@ async function middleware(request: NextRequest) {
 		path.endsWith('.jpg')
 	)
 	if (!needsAuth) {
-		if (token) return redirect(`/`)
-		NextResponse.next()
-	}
-	console.log('puppo')
+		if (token) return NextResponse.redirect(new URL(`/`, request.url))
+        return null
+    }
 
 	if (needsAuth && !token) {
 		const redirectTo = `${path}${request.nextUrl.search}`
-		redirect(`/auth/login?from=${encodeURIComponent(redirectTo)}`)
-	}
-
-	return NextResponse.next()
+		return NextResponse.redirect(new URL(`/auth/login?from=${encodeURIComponent(redirectTo)}`, request.url))
+    }
 }
 
 async function authorized() {
