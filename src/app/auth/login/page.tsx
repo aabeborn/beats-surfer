@@ -30,7 +30,7 @@ export default function LoginPage() {
 						<span
 							className={cn(
 								pacifico.className,
-								'text-sm text-secondary mt-2 md:mb-8'
+								'text-sm text-accent mt-2 md:mb-8'
 							)}
 						>
 							Surf the beats like the ocean waves
