@@ -1,17 +1,5 @@
-import NextAuth, { AuthOptions } from "next-auth"
-import { OAuthUserConfig } from "next-auth/providers"
-import SpotifyProvider, { SpotifyProfile } from "next-auth/providers/spotify"
+import NextAuth, {AuthOptions} from 'next-auth'
 
-const spotify: OAuthUserConfig<SpotifyProfile> = {
-    clientId: process.env.SPOTIFY_ID,
-    clientSecret: process.env.SPOTIFY_SECRET
-}
-
-const config: AuthOptions = {
-    providers: [SpotifyProvider(spotify)],
-    pages: {
-        signIn: '/auth/login'
-    }
-}
+import {config} from '@/lib/auth'
 
 export default NextAuth(config)

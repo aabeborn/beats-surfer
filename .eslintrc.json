@@ -1,26 +1,19 @@
 {
-    "$schema": "https://json.schemastore.org/eslintrc",
-    "root": true,
-    "extends": [
-        "next/core-web-vitals",
-        "plugin:prettier/recommended",
-        "plugin:tailwindcss/recommended"
-    ],
-    "plugins": [
-        "prettier",
-        "tailwindcss"
-    ],
-    "settings": {
-        "tailwindcss": {
-            "callees": [
-                "cn"
-            ],
-            "config": "./tailwind.config.js"
-        },
-        "next": {
-            "rootDir": [
-                "./"
-            ]
-        }
-    },
+	"$schema": "https://json.schemastore.org/eslintrc",
+	"root": true,
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:prettier/recommended",
+		"plugin:tailwindcss/recommended"
+	],
+	"plugins": ["prettier", "tailwindcss"],
+	"settings": {
+		"tailwindcss": {
+			"callees": ["cn"],
+			"config": "./tailwind.config.js"
+		},
+		"next": {
+			"rootDir": ["./"]
+		}
+	}
 }
