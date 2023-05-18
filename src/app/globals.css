@@ -13,6 +13,7 @@ body {
 @layer base {
 	:root {
 		/* --background: 187 22% 93%; */
+		--background: 260 13% 95%;
 		--foreground: 0 0% 100%;
 
 		--muted: 210 40% 96.1%;
@@ -37,6 +38,8 @@ body {
 		/* --secondary: 185 84% 38%; */
 		--secondary: 158 59% 73%;
 		--secondary-foreground: 222.2 47.4% 11.2%;
+		--secondary-background: 165 40% 88%;
+
 
 		--accent: 58 99% 37%;
 		--accent-foreground: 222.2 47.4% 11.2%;
